@@ -8,7 +8,7 @@ int main()
     {
         printf("\nEnter x and y (x must be lower then y): \n");
         scanf("%d %d", &x, &y); // зчитування x та y з клавіатури
-        if (0 > x || 0 > y || x > pow(2, 31) || y > pow(2, 31) || x > y) // перевірка даних
+        if (0 > x || 0 > y || x > pow(2, 32) || y > pow(2, 332) || x > y) // перевірка даних
         {
             printf("\nInappropriate numbers.\n");
             continue; // повторення циклу
