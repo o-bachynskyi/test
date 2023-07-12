@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x, y; // оголошення змінних
+    while (1) // створення циклу
+    {
+        printf("\nEnter x and y (x must be lower then y): \n");
+        scanf("%d %d", &x, &y); // зчитування x та y з клавіатури
+        if (0 > x || 0 > y || x > pow(2, 31) || y > pow(2, 31) || x > y) // перевірка даних
+        {
+            printf("\nInappropriate numbers.\n");
+            continue; // повторення циклу
+        }
+        int step = 0; // оголошення лічильника
+        while (x < y) // створення циклу
+        {
+            if (y - x <= 2) 
+            {
+                x += 1; // збільшення х на 1
+            } 
+            else if ((y - x) % 2 == 0) 
+            {
+                x += 2; // збільшення х на 2
+            } 
+            else 
+            {
+                x += 1;
+            }
+            step++; // збільшення лічильника на 1 після кожного кроку
+        }
+        printf("\nMinimum amount of steps = %d\n", step); // виведення результату
+        break; // вихід з циклу
+    }
+    return 0;
+}
