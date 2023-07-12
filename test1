@@ -12,6 +12,7 @@ int main()
         {
             printf("\nInappropriate numbers.\n");
             continue; // повторення циклу
+asdads
         }
         int step = 0; // оголошення лічильника
         while (x < y) // створення циклу
